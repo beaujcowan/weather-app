@@ -1,20 +1,21 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 // Custom components
-import Location from "./location";
-import Condition from "./condition";
-import Icon from "./icon";
+import Location from './location';
+import Condition from './condition';
+import Icon from './icon';
 
 const WeatherCard = (props) => {
-    const red = 100;
+    let highColor = (1 - (props.temp - 12) / 28) * 255;
+    let lowColor = highColor - 150;
 
     const Card = styled.div`
         margin: 10px auto;
         background: linear-gradient(
-            to bottom,
-            rgba(${red}, 200, 200),
-            lightblue
+            to top,
+            rgb(255, ${highColor}, 0),
+            rgb(255, ${lowColor}, 0)
         );
         width: 200px;
         height: 240px;
