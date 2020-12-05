@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const Condition = (props) => {
     const Temp = styled.h2`
-        font-family: "Fira Sana", sans-serif;
+        font-family: 'Fira Sana', sans-serif;
         font-size: 2rem;
         font-weight: 200;
     `;
 
     const Quality = styled.h3`
-        font-family: "Merriweather", sans-serif;
+        font-family: 'Merriweather', sans-serif;
         font-size: 1.2rem;
     `;
 

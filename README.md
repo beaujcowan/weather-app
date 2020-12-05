@@ -12,3 +12,4 @@ Each commit will be based on the lesson completed, and any roadblocks or persona
 
 -   create-react-app did not run at first in Lesson 2, ran into a JSON parsing error with eslint-plugin. The resolution was doing `npm cache clean --force`, and then the install happened as it normally should.
 -   emotion npm package form Lesson 3 didn't run the first time. Found that the tutorial didn't include the sub-package of @emotion/react. After doing the following command: `npm i @emotion/react --save-dev`
+-   Lesson 5 on adding cold weather background. Decided to adjust his code to make it more readable and S.O.L.I.D from a coding persepctive. Added other functions for setting proper weather gradiant.
