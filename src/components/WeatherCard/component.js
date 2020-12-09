@@ -7,20 +7,28 @@ import Condition from './condition';
 import Icon from './icon';
 
 const setHotTempColor = (temp) => {
-    const highColor = ((temp - 12) / 28) * 255;
-    const lowColor = highColor - 150;
+    let highColor = ((temp - 12) / 28) * 255;
+    let lowColor = highColor - 150;
+
+    if (highColor > 255) highColor = 255;
+    if (lowColor > 255) lowColor = 255;
+    if (lowColor < 0) lowColor = 0;
 
     return `linear-gradient(
             to top,
-            rgb(255, ${highColor}, 0),
-            rgb(255, ${lowColor}, 0)
+            rgb(255, ${lowColor}, 0),
+            rgb(255, ${highColor}, 0)
         )`;
 };
 
 const setColdTempColor = (temp) => {
-    const highColor = (1 - (temp + 20) / 32) * 255;
-    const lowColor = highColor - 150;
-    console.log(highColor);
+    let highColor = (1 - (temp + 20) / 32) * 255;
+    let lowColor = highColor - 150;
+
+    if (highColor > 255) highColor = 255;
+    if (lowColor > 255) lowColor = 255;
+    if (lowColor < 0) lowColor = 0;
+
     return `linear-gradient(
             to top,
             rgb(0, ${highColor}, 255),
@@ -28,8 +36,8 @@ const setColdTempColor = (temp) => {
         )`;
 };
 
-const WeatherCard = (props) => {
-    const currentTemp = parseInt(props.temp);
+const WeatherCard = ({ temp, condition, city, country }) => {
+    const currentTemp = parseInt(temp);
     const tempGradient =
         currentTemp > 12
             ? setHotTempColor(currentTemp)
@@ -50,9 +58,9 @@ const WeatherCard = (props) => {
 
     return (
         <Card>
-            <Location />
-            <Icon />
-            <Condition />
+            <Location city={city} country={country} />
+            <Icon condition={condition} />
+            <Condition temp={temp} condition={condition} />
         </Card>
     );
 };
