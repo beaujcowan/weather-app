@@ -3,26 +3,24 @@ import WeatherCard from './components/WeatherCard/component';
 import './App.css';
 
 function App() {
+    const data = async () => {
+        const weatherAPIKey = 'b17099557576064917ccd4945102b260';
+        const apiRes = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=' + weatherAPIKey);
+
+        const resJSON = await apiRes.json();
+        return resJSON;
+    };
+
+    // returning twice?
+    data().then((res) => {
+        console.log(res.main.temp);
+    });
+
     return (
         <div className='App'>
-            <WeatherCard
-                temp={34}
-                condition='Tornado'
-                city='Sydney'
-                country='AU'
-            />
-            <WeatherCard
-                temp={-16}
-                condition='Snow'
-                city='Paris'
-                country='FR'
-            />
-            <WeatherCard
-                temp={23}
-                condition='Clear'
-                city='New York'
-                country='US'
-            />
+            <WeatherCard temp={34} condition='Tornado' city='Sydney' country='AU' />
+            <WeatherCard temp={-16} condition='Snow' city='Paris' country='FR' />
+            <WeatherCard temp={23} condition='Clear' city='New York' country='US' />
         </div>
     );
 }

@@ -38,10 +38,7 @@ const setColdTempColor = (temp) => {
 
 const WeatherCard = ({ temp, condition, city, country }) => {
     const currentTemp = parseInt(temp);
-    const tempGradient =
-        currentTemp > 12
-            ? setHotTempColor(currentTemp)
-            : setColdTempColor(currentTemp);
+    const tempGradient = currentTemp > 12 ? setHotTempColor(currentTemp) : setColdTempColor(currentTemp);
 
     const Card = styled.div`
         margin: 10px auto;
