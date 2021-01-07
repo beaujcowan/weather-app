@@ -25,7 +25,8 @@ const Icon = (props) => {
     `;
 
     const condition = props.condition;
-    const icon = weatherIcons[condition.toLowerCase()] ? weatherIcons[condition.toLowerCase()] : weatherIcons.clear;
+
+    const icon = weatherIcons[condition] ? weatherIcons[condition] : weatherIcons.clear;
 
     return <Image src={icon} alt='Weather condition' />;
 };
