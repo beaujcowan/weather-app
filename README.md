@@ -18,3 +18,4 @@ Each commit will be based on the lesson completed, and any roadblocks or persona
 -   Lesson 8: Had an error with my code formatting on icon.js, so I had to revert that to get the code to stop erroring. Also consolidated some repeating code ahead of the instructor in an attempt to make the code look more clean.
 -   Lesson 9: Cleanup of code, better error handling. No issues
 -   Lesson 10: Better error handling and improvements to the UX
+-   Lesson 11: Adjusted UX/UI for input field, adjusted some error handling. Added in CSS transition to help show user that the city title can be clicked.

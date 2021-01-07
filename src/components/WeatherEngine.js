@@ -50,11 +50,7 @@ const WeatherEngine = ({ location }) => {
         <div>
             {!loading && !error ? (
                 <div>
-                    <WeatherCard temp={weather.temp} condition={weather.condition} city={weather.city} country={weather.country} />
-                    <form>
-                        <input value={query} onChange={(e) => setQuery(e.target.value)} />
-                        <button onClick={(e) => handleSearch(e)}>Search</button>
-                    </form>
+                    <WeatherCard temp={weather.temp} condition={weather.condition} city={weather.city} country={weather.country} getWeather={getWeather} />
                 </div>
             ) : loading ? (
                 <div style={{ color: 'black' }}>Loading...</div>
