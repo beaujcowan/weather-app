@@ -17,3 +17,4 @@ Each commit will be based on the lesson completed, and any roadblocks or persona
 -   Lesson 7: Connecting weather API to app with _async/await_, got 2 returns of the data in the console log. Thinking this is because of 2 different _await_ happening in the fetch.
 -   Lesson 8: Had an error with my code formatting on icon.js, so I had to revert that to get the code to stop erroring. Also consolidated some repeating code ahead of the instructor in an attempt to make the code look more clean.
 -   Lesson 9: Cleanup of code, better error handling. No issues
+-   Lesson 10: Better error handling and improvements to the UX
