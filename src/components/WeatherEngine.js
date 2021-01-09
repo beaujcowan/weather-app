@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import WeatherCard from './WeatherCard/component';
+import RingLoader from 'react-spinners/RingLoader';
 
 const WeatherEngine = ({ location }) => {
     // const location = 'sydney,au';
@@ -53,7 +54,9 @@ const WeatherEngine = ({ location }) => {
                     <WeatherCard temp={weather.temp} condition={weather.condition} city={weather.city} country={weather.country} getWeather={getWeather} />
                 </div>
             ) : loading ? (
-                <div style={{ color: 'black' }}>Loading...</div>
+                <div style={{ color: 'black', display: 'flex', width: '200px', height: '240px', justifyContent: 'center', alignItems: 'center' }}>
+                    <RingLoader size={45} color='purple' />
+                </div>
             ) : !loading && error ? (
                 <div style={{ color: 'black' }}>
                     There has been an error <br />
