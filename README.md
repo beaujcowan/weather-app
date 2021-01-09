@@ -20,3 +20,4 @@ Each commit will be based on the lesson completed, and any roadblocks or persona
 -   Lesson 10: Better error handling and improvements to the UX
 -   Lesson 11: Adjusted UX/UI for input field, adjusted some error handling. Added in CSS transition to help show user that the city title can be clicked.
 -   Lesson 12: Animations: Added animation packages and loader icons to React
+-   Lesosn 13: Adjusted card input functionality with framer motion and styled components
